@@ -49,7 +49,8 @@ class App:
             platform['OPTIONS']['session'] = self.session
             engine = mod.engine(**platform['OPTIONS'])
             engine.configure()
-            tasks = engine.tasks()
+            tasks = engine.tasks
+
             if tasks:
                 self.tasks.append(*tasks)
 

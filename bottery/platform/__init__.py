@@ -41,8 +41,9 @@ class BasePlatform:
     def webhook_url(self):
         return 'https://{}{}'.format(settings.HOSTNAME, self.webhook_endpoint)
 
+    @property
+    def tasks(self):
+        return getattr(self, '__tasks__', [])
+
     def build_message(self):
         raise NotImplementedError('create_message not implemented')
-
-    def tasks(self):
-        return None
