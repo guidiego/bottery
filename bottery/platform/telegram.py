@@ -51,8 +51,8 @@ class TelegramUser(User):
     https://core.telegram.org/bots/api#user
     '''
     def __init__(self, sender):
-        self.id = sender['id']
-        self.first_name = sender['first_name']
+        self.id = sender.get('id')
+        self.first_name = sender.get('first_name')
         self.last_name = sender.get('last_name')
         self.username = sender.get('username')
         self.language = sender.get('language_code')
