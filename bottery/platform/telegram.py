@@ -67,7 +67,7 @@ class TelegramUser(User):
         return s.format(u=self)
 
 
-class TelegramEngine(platform.BasePlataform):
+class TelegramEngine(platform.BasePlatform):
     platform = 'telegram'
 
     def __init__(self, *args, **kwargs):

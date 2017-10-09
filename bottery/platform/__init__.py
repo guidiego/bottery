@@ -27,7 +27,7 @@ def discover_view(message):
     return None
 
 
-class BasePlataform:
+class BasePlatform:
 
     def __init__(self, **kw):
         for item, value in kw.items():
