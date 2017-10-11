@@ -80,7 +80,7 @@ class TelegramEngine(platform.BasePlatform):
         if not hasattr(self, 'mode'):
             self.mode = 'polling'
 
-        self.__tasks__ = [ self.polling ]
+        self.__tasks__ = [self.polling]
 
     def configure(self):
         response = self.api.delete_webhook()
