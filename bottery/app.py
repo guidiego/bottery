@@ -51,7 +51,7 @@ class App:
             engine.configure()
             tasks = engine.tasks
 
-            if tasks:
+            if len(tasks):
                 self.tasks.append(*tasks)
 
             logger.debug('[%s] Ready', engine.platform)
