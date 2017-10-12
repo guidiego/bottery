@@ -30,6 +30,8 @@ def discover_view(message):
 class BasePlatform:
 
     def __init__(self, **kw):
+        self.tasks = []
+
         for item, value in kw.items():
             setattr(self, item, value)
 
@@ -40,10 +42,6 @@ class BasePlatform:
     @property
     def webhook_url(self):
         return 'https://{}{}'.format(settings.HOSTNAME, self.webhook_endpoint)
-
-    @property
-    def tasks(self):
-        return getattr(self, '__tasks__', [])
 
     def build_message(self):
         raise NotImplementedError('create_message not implemented')
