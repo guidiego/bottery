@@ -159,4 +159,5 @@ def normalize_telegram_response(view, message):
         "parse_mode": "Markdown",
     }
 
+
 engine = TelegramEngine

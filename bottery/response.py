@@ -1,8 +1,9 @@
-__all__ = ['telegram']
+integrations = ['telegram']
+
 
 class Response():
     def __init__(self, *args, **kw):
-        for integration in __all__:
+        for integration in integrations:
             i = kw.get(integration, None)
 
             if i:
