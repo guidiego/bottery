@@ -3,15 +3,19 @@
 def telegram_response(
     chat_id,
     text,
-    reply_markup,
+    reply_markup=None,
     parse_mode='Markdown',
 ):
-    return {
+    data = {
         'chat_id': chat_id,
         'text': text,
         'parse_mode': parse_mode,
-        'reply_markup': reply_markup,
     }
+
+    if (reply_markup):
+        data['reply_markup'] = reply_markup
+
+    return data
 
 
 def reply_keyboard_markup(buttons, *args, **kw):
